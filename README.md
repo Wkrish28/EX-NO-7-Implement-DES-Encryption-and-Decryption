@@ -16,7 +16,7 @@ To use the Data Encryption Standard (DES) algorithm for a practical application,
 #include <stdio.h>
 #include <string.h>
 
-// XOR encryption function
+
 void xor_encrypt_decrypt(char *input, char *key) {
     int input_len = strlen(input);
     int key_len = strlen(key);
@@ -32,11 +32,10 @@ int main() {
 
     printf("Original URL: %s\n", url);
 
-    // Encrypt the URL
+    
     xor_encrypt_decrypt(url, key);
     printf("Encrypted URL: %s\n", url);
 
-    // Decrypt the URL (since XOR is reversible using the same key)
     xor_encrypt_decrypt(url, key);
     printf("Decrypted URL: %s\n", url);
 
